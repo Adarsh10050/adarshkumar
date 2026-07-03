@@ -1,0 +1,230 @@
+.experience {
+    background: #F7F5F2;
+    color: #1F2933;
+    padding: 0 24px 80px;
+}
+
+.experience__inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience__eyebrow {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A2E2E;
+    margin: 0 0 10px;
+}
+
+.experience__heading {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    color: #1F2933;
+    margin: 0 0 12px;
+}
+
+.experience__subheading {
+    color: #5C6670;
+    font-size: 15.5px;
+    line-height: 1.6;
+    margin: 0 0 48px;
+    max-width: 56ch;
+}
+
+.experience__timeline {
+    position: relative;
+    padding-left: 8px;
+}
+
+.experience__item {
+    position: relative;
+    display: flex;
+    gap: 22px;
+    padding-bottom: 32px;
+}
+
+.experience__item:last-child {
+    padding-bottom: 0;
+}
+
+.experience__marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 12px;
+    flex-shrink: 0;
+}
+
+.experience__marker::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: -32px;
+    width: 1px;
+    background: #E4E0DA;
+}
+
+.experience__item:last-child .experience__marker::before {
+    display: none;
+}
+
+.experience__dot {
+    position: relative;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 2px solid #7A2E2E;
+    margin-top: 6px;
+}
+
+.experience__dot--current {
+    background: #7A2E2E;
+    box-shadow: 0 0 0 4px rgba(122, 46, 46, 0.15);
+}
+
+.experience__card {
+    flex: 1;
+    border: 1px solid #E4E0DA;
+    border-radius: 12px;
+    background: #FFFFFF;
+    padding: 20px 22px;
+    transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.experience__card:hover {
+    border-color: #7A2E2E;
+    box-shadow: 0 6px 16px rgba(122, 46, 46, 0.08);
+}
+
+.experience__card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.experience__role {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: 16.5px;
+    font-weight: 600;
+    color: #1F2933;
+    margin: 0 0 4px;
+}
+
+.experience__company {
+    font-size: 13.5px;
+    color: #7A2E2E;
+    margin: 0;
+}
+
+.experience__location {
+    color: #8B8F94;
+}
+
+.experience__date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #8B8F94;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.experience__badge {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #7A2E2E;
+    background: rgba(122, 46, 46, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.experience__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5C6670;
+    margin: 0 0 14px;
+}
+
+.experience__skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.experience__skill {
+    font-size: 12px;
+    font-weight: 500;
+    color: #1F2933;
+    padding: 5px 11px;
+    border-radius: 7px;
+    border: 1px solid #E4E0DA;
+    background: #F7F5F2;
+}
+
+@media (max-width: 640px) {
+    .experience {
+        padding: 0 18px 56px;
+    }
+
+    .experience__subheading {
+        margin: 0 0 32px;
+    }
+
+    .experience__card-header {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .experience__date {
+        margin-top: 0;
+    }
+
+    .experience__card {
+        padding: 16px 18px;
+    }
+
+    .experience__item {
+        gap: 16px;
+        padding-bottom: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience {
+        padding: 0 14px 48px;
+    }
+
+    .experience__eyebrow {
+        font-size: 11px;
+    }
+
+    .experience__subheading {
+        font-size: 14.5px;
+        margin: 0 0 24px;
+    }
+
+    .experience__role {
+        font-size: 15.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .experience__item,
+    .experience__card {
+        transition: none;
+    }
+}

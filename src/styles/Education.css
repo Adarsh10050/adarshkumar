@@ -1,0 +1,232 @@
+.education {
+    background: #F7F5F2;
+    color: #1F2933;
+    padding: 0 24px 80px;
+}
+
+.education__inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education__eyebrow {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #7A2E2E;
+    margin: 0 0 10px;
+}
+
+.education__heading {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: clamp(28px, 4vw, 38px);
+    font-weight: 700;
+    color: #1F2933;
+    margin: 0 0 12px;
+}
+
+.education__subheading {
+    color: #5C6670;
+    font-size: 15.5px;
+    line-height: 1.6;
+    margin: 0 0 48px;
+    max-width: 56ch;
+}
+
+.education__timeline {
+    position: relative;
+    padding-left: 8px;
+}
+
+.education__item {
+    position: relative;
+    display: flex;
+    gap: 22px;
+    padding-bottom: 32px;
+}
+
+.education__item:last-child {
+    padding-bottom: 0;
+}
+
+.education__marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 12px;
+    flex-shrink: 0;
+}
+
+.education__marker::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: -32px;
+    width: 1px;
+    background: #E4E0DA;
+}
+
+.education__item:last-child .education__marker::before {
+    display: none;
+}
+
+.education__dot {
+    position: relative;
+    z-index: 1;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 2px solid #7A2E2E;
+    margin-top: 6px;
+}
+
+.education__dot--current {
+    background: #7A2E2E;
+    box-shadow: 0 0 0 4px rgba(122, 46, 46, 0.15);
+}
+
+.education__card {
+    flex: 1;
+    border: 1px solid #E4E0DA;
+    border-radius: 12px;
+    background: #FFFFFF;
+    padding: 20px 22px;
+    transition: border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.education__card:hover {
+    border-color: #7A2E2E;
+    box-shadow: 0 6px 16px rgba(122, 46, 46, 0.08);
+}
+
+.education__card-top {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.education__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(122, 46, 46, 0.08);
+    color: #7A2E2E;
+    flex-shrink: 0;
+}
+
+.education__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.education__card-header {
+    flex: 1;
+}
+
+.education__institution {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: 16.5px;
+    font-weight: 600;
+    color: #1F2933;
+    margin: 0 0 3px;
+}
+
+.education__degree {
+    font-size: 13.5px;
+    color: #7A2E2E;
+    margin: 0 0 5px;
+}
+
+.education__date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: #8B8F94;
+}
+
+.education__badge {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #7A2E2E;
+    background: rgba(122, 46, 46, 0.1);
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.education__grade {
+    font-size: 13px;
+    color: #1F2933;
+    margin: 0 0 10px;
+}
+
+.education__grade span {
+    color: #8B8F94;
+    font-weight: 500;
+}
+
+.education__description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5C6670;
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .education {
+        padding: 0 18px 56px;
+    }
+
+    .education__subheading {
+        margin: 0 0 32px;
+    }
+
+    .education__card-top {
+        flex-direction: column;
+    }
+
+    .education__card {
+        padding: 16px 18px;
+    }
+
+    .education__item {
+        gap: 16px;
+        padding-bottom: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .education {
+        padding: 0 14px 48px;
+    }
+
+    .education__eyebrow {
+        font-size: 11px;
+    }
+
+    .education__subheading {
+        font-size: 14.5px;
+        margin: 0 0 24px;
+    }
+
+    .education__institution {
+        font-size: 15.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .education__item,
+    .education__card {
+        transition: none;
+    }
+}

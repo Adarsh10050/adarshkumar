@@ -1,0 +1,26 @@
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border-radius: 50%;
+    background: rgba(122, 46, 46, 0.55);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: multiply;
+    transition: transform 90ms linear, width 200ms ease, height 200ms ease;
+}
+
+.custom-cursor.is-hover {
+    width: 28px;
+    height: 28px;
+    margin: -14px 0 0 -14px;
+}
+
+/* Only hide the real cursor when our custom one is actually active */
+.has-custom-cursor,
+.has-custom-cursor * {
+    cursor: none;
+}
