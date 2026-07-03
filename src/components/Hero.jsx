@@ -63,7 +63,7 @@ function TypingGreeting({ text }) {
 }
 
 const BUTTONS = [
-    { href: '/resume.pdf', label: 'Download resume', variant: 'solid', extra: { download: true } },
+    { href: '/Adarsh_Resume.pdf', label: 'Download resume', variant: 'solid', extra: { download: true } },
     { href: 'mailto:adarshdev85219@gmail.com', label: 'Contact me', variant: 'outline' },
 ];
 
